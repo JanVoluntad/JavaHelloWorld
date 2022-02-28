@@ -53,7 +53,7 @@ stages:
                   # Modify deployment script based on the app type
                   echo "Starting deployment script run"
                   whoami
-                  sudo -b java -jar '$(Pipeline.Workspace)/drop/target/*.jar'
+                  sudo -b java -jar '$(Pipeline.Workspace)/drop/target/gs-maven-0.1.0.jar'
           routeTraffic:
             steps:
             - script: echo routing traffic
