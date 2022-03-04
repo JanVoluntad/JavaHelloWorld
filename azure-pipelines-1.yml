@@ -1,5 +1,6 @@
 # Starter pipeline
 
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -18,10 +19,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: Ansible@0
+#- task: Ansible@0
+#  inputs:
+#    ansibleInterface: 'remoteMachine'
+#    connectionOverSsh: 'CentOSVM'
+#    playbookSourceRemoteMachine: 'ansibleMachine'
+#    playbookPathAnsibleMachineOnRemoteMachine: '~'
+#    inventoriesRemoteMachine: 'noInventory'
+- task: SSH@0
   inputs:
-    ansibleInterface: 'remoteMachine'
-    connectionOverSsh: 'CentOSVM'
-    playbookSourceRemoteMachine: 'ansibleMachine'
-    playbookPathAnsibleMachineOnRemoteMachine: '~'
-    inventoriesRemoteMachine: 'noInventory'
+    sshEndpoint: 'CentOSVM'
+    runOptions: 'commands'
+    commands: 'echo "PATH: $PATH"'
+    readyTimeout: '20000'
