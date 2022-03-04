@@ -23,7 +23,6 @@ steps:
     connectionOverSsh: 'CentOSVM'
     playbookSourceRemoteMachine: 'ansibleMachine'
     playbookPathAnsibleMachineOnRemoteMachine: '~/main.yml'
-    inventoriesRemoteMachine: 'file'
     inventoryFileSourceRemoteMachine: 'ansibleMachine'
     inventoryFileAnsibleMachineOnRemoteMachine: '~/main.yml'
     inventoriesRemoteMachine: 'hostList'
