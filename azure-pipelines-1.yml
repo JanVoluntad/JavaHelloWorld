@@ -26,3 +26,5 @@ steps:
     inventoriesRemoteMachine: 'file'
     inventoryFileSourceRemoteMachine: 'ansibleMachine'
     inventoryFileAnsibleMachineOnRemoteMachine: '~/main.yml'
+    inventoriesRemoteMachine: 'hostList'
+    inventoryHostListRemoteMachine: '20.102.68.92'
