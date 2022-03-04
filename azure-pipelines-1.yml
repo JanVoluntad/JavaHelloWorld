@@ -30,5 +30,5 @@ steps:
   inputs:
     sshEndpoint: 'CentOSVM'
     runOptions: 'commands'
-    commands: 'echo "PATH: $PATH" ; ansible-playbook main.yml'
+    commands: 'echo "PATH: $PATH" ; /home/azureuser/ansible-playbook main.yml'
     readyTimeout: '20000'
